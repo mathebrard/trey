@@ -1,0 +1,27 @@
+.not-found {
+  height: 100vh;
+  background-image: url("../../../../../public/assets/images/Bell-actualites-Rodriguez-01-2000x1200.jpeg"); /* Remplacer par ton image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  .not-found-text {
+    text-align: center;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* Optionnel pour améliorer la lisibilité */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+}

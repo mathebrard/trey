@@ -1,0 +1,54 @@
+@import "../../../../styles.scss";
+
+footer {
+  background-color: $primary-color; /* Fond sombre */
+  color: white; /* Texte blanc */
+  padding: 20px 0;
+  font-size: 14px;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .footer-left {
+    p {
+      margin: 0;
+    }
+  }
+
+  .footer-right {
+    a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $primary-color; /* Couleur au survol */
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacement entre les icônes */
+    padding-top: 10px;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
