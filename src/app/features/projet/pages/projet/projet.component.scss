@@ -1,3 +1,5 @@
+@import "../../../../../styles.scss";
+
 .image-sequence {
   display: flex;
   flex-direction: column;
@@ -51,3 +53,29 @@
     margin-bottom: 20px; /* Espacement entre les images */
   }
 }
+.container {
+  display: flex;
+  justify-content: space-between; /* Sépare en deux parties */
+  align-items: flex-start; /* Aligne en haut au lieu du centre */
+  width: 80%;
+  max-width: 1200px;
+  margin: 2em auto;
+  padding-top: 2rem; /* Ajoute un petit décalage */
+}
+
+.text-content {
+  width: 45%;
+  line-height: 1.6;
+  color: $black;
+}
+
+.title {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end; /* Aligne le texte à droite */
+  align-items: flex-start; /* S'assure que "Agence" reste en haut */
+  font-size: 2rem;
+  color: $black;
+  padding-top: 2rem; /* Ajuste pour qu'il colle en haut */
+}
+
