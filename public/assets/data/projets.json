@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Villa Castellaras",
+        "mainImage": "/assets/images/CASTELLARAS-1023.jpeg",
+        "slug": "castellaras"
+    },
+    {
+        "name": "Villa Cap d'Antibes",
+        "mainImage": "/assets/images/CapAntibes2.jpeg",
+        "slug": "capantibes"
+    },
+    {
+        "name": "Villa Vence",
+        "mainImage": "/assets/images/VENCE-1023.jpeg",
+        "slug": "vence",
+        "fullWidth": true
+    },
+    {
+        "name": "Villa Le Moulin",
+        "mainImage": "/assets/images/LEMOULIN-0211.jpeg",
+        "slug": "lemoulin"
+    },
+    {
+        "name": "Villa Castellaras 2",
+        "mainImage": "/assets/images/CASTELLARAS-1023.jpeg",
+        "slug": "castellaras2"
+    },
+    {
+        "name": "Villa Castellaras 3",
+        "mainImage": "/assets/images/CASTELLARAS-1023.jpeg",
+        "slug": "castellaras3"
+    },
+    {
+        "name": "Villa Cap d'Antibes 2",
+        "mainImage": "/assets/images/CapAntibes2.jpeg",
+        "slug": "capantibes2"
+    },
+    {
+        "name": "Villa Vence 2",
+        "mainImage": "/assets/images/VENCE-1023.jpeg",
+        "slug": "vence2",
+        "fullWidth": true
+    },
+    {
+        "name": "Villa Le Moulin 2",
+        "mainImage": "/assets/images/LEMOULIN-0211.jpeg",
+        "slug": "lemoulin2"
+    },
+    {
+        "name": "Villa Castellaras 4",
+        "mainImage": "/assets/images/CASTELLARAS-1023.jpeg",
+        "slug": "castellaras4"
+    }
+]

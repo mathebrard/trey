@@ -1,70 +1,15 @@
-<div class="image-sequence">
+<div>
   <app-navbar></app-navbar>
-  <div class="container">
-    <div class="title">Agence</div>
-    <div class="text-content">
-        <div>
-            Bienvenue dans l’univers architectural de Sabine Bell
-        </div>
-        <div>
-            Architecte DPLG depuis 25 ans Sabine Bell a étudié en Allemagne et a collaboré avec les plus grands cabinets d’Architecture Allemands et Européens.
-        </div>
-        <div>
-            Installée en France maintenant depuis 18 ans, elle a développé une noyau de connaissances techniques et créatives qui lui permettent d’être l’Architecte qui accompagnera vos projets dans toutes ses étapes.
-        </div>
-        <div>
-            Parlant couramment le français, l’anglais et l’allemand, vous trouverez un interlocuteur attentif et compétent à vos côtés…
-        </div>
-    </div>
-</div>
-  <div class="image-row">
-    <div class="image-item">
-      <img
-        src="/assets/images/bell-architecture-villa-LaDomaine-17-05.jpeg"
-        alt="Après"
-      />
-      <p>Avant</p>
-    </div>
-    <div class="image-item">
-      <img
-        src="/assets/images/bell-architecture-villa-LaDomaine-17-05.jpeg"
-        alt="Après"
-      />
-      <p>Après</p>
-    </div>
-  </div>
 
-  <div class="image-row reverse">
-    <div class="image-item">
-      <img
-        src="/assets/images/bell-architecture-villa-LaDomaine-17-05.jpeg"
-        alt="Après"
-      />
-      <p>Avant</p>
-    </div>
-    <div class="image-item">
-      <img
-        src="/assets/images/bell-architecture-villa-LaDomaine-17-05.jpeg"
-        alt="Après"
-      />
-      <p>Après</p>
-    </div>
-  </div>
+  <div class="flex flex-col gap-4 w-full">
+    <ng-container *ngFor="let bloc of projetsAffichage">
+      <ng-container *ngIf="bloc.type === 'single'">
+        <app-image [projet1]="bloc.p" [isLargeBefore]="false"></app-image>
+      </ng-container>
+      <ng-container *ngIf="bloc.type === 'pair'">
+        <app-image [projet1]="bloc.p1" [projet2]="bloc.p2" [isLargeBefore]="bloc.isLargeBefore"></app-image>
+      </ng-container>
+    </ng-container>
 
-  <div class="image-row">
-    <div class="image-item">
-      <img
-        src="./assets/images/bell-architecture-villa-CapAntibes.jpg"
-        alt="Avant"
-      />
-      <p>Avant</p>
-    </div>
-    <div class="image-item">
-      <img
-        src="/assets/images/bell-architecture-villa-LaDomaine-17-05.jpeg"
-        alt="Après"
-      />
-      <p>Après</p>
-    </div>
   </div>
 </div>

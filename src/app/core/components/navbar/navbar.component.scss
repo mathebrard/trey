@@ -1,39 +1,5 @@
 @import "../../../../styles.scss";
 
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  background: $primary-color;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.navbar-logo {
-  height: 90%; // Prend toute la hauteur de la navbar
-  width: auto; // Pour conserver les proportions
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  gap: 50px;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  display: inline;
-}
-
-a {
-  text-decoration: none;
-  color: $white;
-  font-size: 20px;
-  font-weight: 500;
-  position: relative;
-  padding: 5px 0;
-}
-
 a::after {
   content: "";
   display: block;
@@ -44,7 +10,42 @@ a::after {
   margin: auto;
 }
 
-a:hover::after,
-a.active::after {
-  width: 100%;
+.navbar {
+  min-height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 2rem;
+  background-color: $primary-color;
+  color: $white;
+  position: relative;
+
+  &-links {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      text-decoration: none;
+      color: $white;
+      font-size:larger;
+    }
+    a:hover::after,
+    a.active::after {
+      width: 100%;
+    }
+    a:hover {
+      cursor: pointer;
+    }
+  }
+
+  &-logo {
+
+    img {
+      height: 12vh; // Ajuste la taille du logo selon ton besoin
+    }
+  }
+
+  &-lang {
+    
+  }
 }

@@ -1,8 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-/* styles.scss */
-
 // _variables.scss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 $primary-color: #C1B7B5;
+$secondary-color: #AC9F9C;
 $white: white;
 $black: black;
 
