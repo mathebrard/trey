@@ -2,7 +2,12 @@
     {
         "name": "Villa Castellaras",
         "mainImage": "/assets/images/CASTELLARAS-1023.jpeg",
-        "slug": "castellaras"
+        "slug": "castellaras",
+        "gallery": [
+            "/assets/images/CASTELLARAS-1023.jpeg",
+            "/assets/images/CASTELLARAS-1023.jpeg",
+            "/assets/images/CASTELLARAS-1023.jpeg"
+        ]
     },
     {
         "name": "Villa Cap d'Antibes",

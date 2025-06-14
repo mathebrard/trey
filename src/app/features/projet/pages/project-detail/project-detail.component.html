@@ -1,3 +1,13 @@
-<div>
-    {{ project?.name}}
+<h2 class="text-3xl mb-8">{{ project?.name }}</h2>
+
+<div class="flex flex-col gap-4 w-full">
+    <ng-container *ngFor="let bloc of blocs">
+        <ng-container *ngIf="bloc.type === 'single'">
+            <app-image [projet1]="bloc.p" [isLargeBefore]="false"></app-image>
+        </ng-container>
+
+        <ng-container *ngIf="bloc.type === 'pair'">
+            <app-image [projet1]="bloc.p1" [projet2]="bloc.p2" [isLargeBefore]="bloc.isLargeBefore"></app-image>
+        </ng-container>
+    </ng-container>
 </div>
