@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -10,6 +10,14 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+
+  isCompact = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isCompact = window.scrollY > 50;
+  }
+  
   isDropdownOpen = false;
 
   showMenu() {

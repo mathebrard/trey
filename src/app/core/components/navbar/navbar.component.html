@@ -1,17 +1,14 @@
-<nav class="navbar">
-  <!-- Liens à gauche -->
+<nav [ngClass]="{ 'navbar': true, 'full-screen': !isCompact, 'compact': isCompact }">
   <div class="navbar-links p-4">
     <a routerLink="/projet">Projets</a>
     <a routerLink="/agence">Agence</a>
     <a routerLink="/contact">Contact</a>
   </div>
 
-  <!-- Logo centré -->
   <div class="navbar-logo">
-    <img src="assets/images/logo.jpeg" alt="Logo" class="navbar-logo">
+    <img src="assets/images/logo.jpeg" alt="Logo" class="navbar-logo-img" />
   </div>
 
-  <!-- Menu Langue à droite -->
   <div class="navbar-links">
     <a>Français</a>
     <a>English</a>

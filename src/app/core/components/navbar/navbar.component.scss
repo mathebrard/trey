@@ -9,6 +9,28 @@ a::after {
   transition: width 0.3s ease;
   margin: auto;
 }
+nav.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+
+  &.full-screen {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &.compact {
+    height: 50px;
+    flex-direction: row;
+    padding: 0 2rem;
+  }
+}
 
 .navbar {
   min-height: 12vh;
