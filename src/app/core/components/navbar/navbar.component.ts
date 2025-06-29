@@ -29,12 +29,12 @@ export class NavbarComponent {
 
 
   @HostListener('window:scroll', [])
-onWindowScroll() {
-  // Ne compact pas si on n’est pas sur la home : déjà forcé à true
-  if (this.router.url === '/') {
-    this.isCompact = window.scrollY > 10;
+  onWindowScroll() {
+    // Ne compact pas si on n’est pas sur la home : déjà forcé à true
+    if (this.router.url === '/') {
+      this.isCompact = window.scrollY > 10;
+    }
   }
-}
   
   isDropdownOpen = false;
 
@@ -44,5 +44,9 @@ onWindowScroll() {
 
   hideMenu() {
     this.isDropdownOpen = false;
+  }
+
+  get isFullscreen(): boolean {
+    return !this.isCompact && this.router.url === '/';
   }
 }
