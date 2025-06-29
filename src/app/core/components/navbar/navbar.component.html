@@ -1,8 +1,8 @@
 <nav class="navbar" [ngClass]="{ 'full-screen': !isCompact, 'compact': isCompact }">
   <div
     *ngIf="!isCompact"
-    class="absolute w-full h-full bg-cover bg-center filter blur-sm"
-    [ngStyle]="{ 'background-image': 'url(assets/images/Bell-ExtReno-StPaulVence-1023-UNE.jpeg)' }">
+    class="absolute w-full h-full bg-cover bg-center"
+    [ngStyle]="{ 'background-image': 'url(assets/images/LEMOULIN-0211.jpeg)' }">
   </div>
 
   <div class="relative z-10 w-full flex justify-between items-center px-8">
@@ -13,8 +13,10 @@
     </div>
 
     <div class="navbar-logo">
-      <img src="assets/images/logo-without-bg.png" alt="Logo" class="navbar-logo-img" />
+      <img *ngIf="!isCompact" src="assets/images/logo-without-bg.png" alt="Logo" class="navbar-logo-img-compact" />
+      <img *ngIf="isCompact" src="assets/images/second-logo.png" alt="Logo" class="navbar-logo-img" />
     </div>
+
 
     <div class="navbar-links">
       <a>Français</a>

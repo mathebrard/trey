@@ -64,7 +64,8 @@ nav.navbar {
   &-logo {
 
     img {
-      height: 12vh; // Ajuste la taille du logo selon ton besoin
+      height: 6vh; // Ajuste la taille du logo selon ton besoin
+      
     }
   }
 
@@ -72,3 +73,8 @@ nav.navbar {
     
   }
 }
+
+.navbar-logo-img-compact {
+  height: 40vh !important;
+}
+
