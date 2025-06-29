@@ -10,43 +10,47 @@ import { HistoireComponent } from './features/agence/pages/histoire/histoire.com
 import { ProjectDetailComponent } from './features/projet/pages/project-detail/project-detail.component';
 
 export const routes: Routes = [
-  { path: '', component: ProjetComponent },
+  {
+    path: '',
+    component: ProjetComponent,
+    children: [
+      {
+        path: 'projet/villa',
+        component: VillaComponent,
+      }
+    ]
+  },
+  {
+    path: 'projet',
+    redirectTo: '',
+    pathMatch: 'full'
+  },
   {
     path: 'projet/:slug',
     component: ProjectDetailComponent
   },
   {
-    path: 'projet',
-    component: ProjetComponent,
+    path: 'agence',
+    component: AgenceComponent,
     children: [
       {
-        path: 'villa', // child route path MARCHE PAS POUR LINSTANT
-        component: VillaComponent, // child route component that the router renders
+        path: '',
+        redirectTo: 'philosophie',
+        pathMatch: 'full'
       },
-    ],
-  },
-  {
-  path: 'agence',
-  component: AgenceComponent, // 🧱 le shell avec navbar + <router-outlet>
-  children: [
-    {
-      path: '',
-      redirectTo: 'philosophie', // ou autre par défaut
-      pathMatch: 'full'
-    },
-    {
-      path: 'philosophie',
-      component: PhilosophieComponent
-    },
-    {
-      path: 'services',
-      component: ServicesComponent
-    },
-    {
-      path: 'histoire',
-      component: HistoireComponent
-    }
-  ]
+      {
+        path: 'philosophie',
+        component: PhilosophieComponent
+      },
+      {
+        path: 'services',
+        component: ServicesComponent
+      },
+      {
+        path: 'histoire',
+        component: HistoireComponent
+      }
+    ]
   },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: PageNotFoundComponent },
